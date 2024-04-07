@@ -42,7 +42,7 @@ const curriedDevtoolsExchange: (a: Messenger) => Exchange = ({
     pipe(
       ops$,
       tap(handleOperation({ client, sendMessage })),
-      forward,
+      forward(ops$),
       tap(handleResult({ client, sendMessage }))
     );
 };
