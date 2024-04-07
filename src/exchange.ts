@@ -150,7 +150,7 @@ export const devtoolsExchange = ((): Exchange => {
 
   // Prod or SSR
   if (process.env.NODE_ENV === 'production' || isSSR) {
-    return ({ forward }) => (ops$) => pipe(ops$, forward(ops$)) as Source<OperationResult<any, any>>;
+    return ({ forward }) => (ops$) => pipe(ops$, forward(ops$));
   }
 
   if (isNative) {
