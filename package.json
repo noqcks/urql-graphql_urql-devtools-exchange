@@ -83,7 +83,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "wonka": ">= 4.0.9"
+    "wonka": ">=6.3.4"
   },
   "peerDependencies": {
     "@urql/core": ">= 1.14.0",

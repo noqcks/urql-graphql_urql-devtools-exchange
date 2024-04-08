@@ -126,7 +126,7 @@ const handleExecuteQueryMessage = ({ client }: HandlerArgs) => (
     }
   );
 
-  pipe(client.executeRequestOperation(op), take(1), toPromise);
+  pipe(client.executeRequestOperation(op), take(1), toPromise()).then(() => {});
 };
 
 /** Handle connection initiated by devtools. */
